@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import PropTypes from "prop-types";
 import { SliderContext } from '../../../features/Slider'
 import './Dot.scss'
 
@@ -12,3 +13,7 @@ export default function Dot({ number }) {
     />
   );
 }
+
+Dot.propTypes = {
+  number: PropTypes.number.isRequired
+};

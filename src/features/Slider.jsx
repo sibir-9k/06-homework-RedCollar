@@ -1,4 +1,5 @@
-import { useEffect, useState, createContext } from "react";
+import React, { useEffect, useState, createContext } from "react";
+import PropTypes from "prop-types";
 import Arrows from "../widgets/arrows/Arrows";
 import Dots from "../widgets/dots/Dots";
 import SlidesList from "../widgets/slide-list/SlideList";
@@ -90,4 +91,17 @@ export const Slider = function ({ width, height, autoPlay, autoPlayTime }) {
   );
 };
 
+Slider.propTypes = {
+  autoPlay: PropTypes.bool,
+  autoPlayTime: PropTypes.number,
+  width: PropTypes.string,
+  height: PropTypes.string
+};
+
+Slider.defaultProps = {
+  autoPlay: false,
+  autoPlayTime: 5000,
+  width: "100%",
+  height: "100%"
+};
 

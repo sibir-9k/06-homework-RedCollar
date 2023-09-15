@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import SlideTitle from '../../shared/ui/title/Title';
 import SlideImage from "../../shared/ui/image/Image";
 
-import './slide.scss'
+import './Slide.scss'
 
 export default function Slide({ data }) {
 
@@ -13,3 +14,10 @@ export default function Slide({ data }) {
     </div>
   );
 }
+
+Slide.propTypes = {
+  data: PropTypes.shape({
+    imageUrl: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired
+  }).isRequired
+};
