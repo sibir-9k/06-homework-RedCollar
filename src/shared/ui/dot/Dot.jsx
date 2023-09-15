@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { SliderContext } from '../../../features/Slider'
-import './dot.scss'
+import './Dot.scss'
 
 export default function Dot({ number }) {
   const { goToSlide, slideNumber } = useContext(SliderContext);
